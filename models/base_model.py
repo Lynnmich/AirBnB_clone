@@ -34,4 +34,3 @@ class BaseModel:
         temp['updated_at'] = self.updated_at.isoformat()
         temp['created_at'] = self.created_at.isoformat()
         return temp
-    
