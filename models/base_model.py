@@ -22,4 +22,16 @@ class BaseModel:
         return "[" + self.__class__.__name__ + \
             "] (" + self.id + ") " + str(self.__dict__)
 
+    def save(self):
+        """Updates the public attribute updated_at"""
+        self.updated_at = datetime.utcnow()
+
+    def to_dict(self):
+        """Returns a dictionary containing all keys/values of dict"""
+        temp = self.__dict__.copy()
+
+        temp['__class__'] = self.__class__.__name__
+        temp['updated_at'] = self.updated_at.isoformat()
+        temp['created_at'] = self.created_at.isoformat()
+        return temp
     
