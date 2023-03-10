@@ -1,6 +1,9 @@
 """This module represents file storage class"""
 
 
+import json
+
+
 class FileStorage():
     """This class serializes instances
     to JSON file and deserializes JSON file to instances"""
@@ -15,5 +18,14 @@ class FileStorage():
     def new(self, obj):
         """sets in __objects the obj with
         key <obj class name>.id"""
-        FileStorage.__objects[obj.id] = obj
-        
+        FileStorage.__objects["{}.{}".format(
+            obj.__class__.name, id)] = obj
+
+    def save(self):
+        """ serializes __objects to the JSON file
+        (path: __file_path)"""
+
+        dict_ob = FileStorage.__objects
+        objTodict = {key: dict_ob[key].to_dict() for key in dict_ob.keys()}
+        with open(FileStorage.__file_path, 'w', encoding="utf-8") as f:
+            json.dump(objTodict)
