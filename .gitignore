@@ -5,3 +5,4 @@ build/
 develop-eggs/
 dist/
 test__.py
+file.json
