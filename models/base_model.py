@@ -4,6 +4,7 @@
 import copy
 from datetime import datetime
 import uuid
+from models import storage
 
 
 class BaseModel:
@@ -27,6 +28,7 @@ class BaseModel:
         self.id = str(uuid.uuid4())
         self.created_at = datetime.utcnow()
         self.updated_at = copy.deepcopy(self.created_at)
+        storage.new(self)
 
     def __str__(self):
         """String representation of Base Model"""
