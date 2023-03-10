@@ -1,6 +1,5 @@
+#!/usr/bin/python3
 """This module represents file storage class"""
-
-
 import json
 
 
@@ -29,3 +28,13 @@ class FileStorage():
         objTodict = {key: dict_ob[key].to_dict() for key in dict_ob.keys()}
         with open(FileStorage.__file_path, 'w', encoding="utf-8") as f:
             json.dump(objTodict)
+
+    def reload(self):
+        """deserializes the JSON file to __objects """
+        try:
+            with open(FileStorage.__file_path) as f:
+                loads_obj = json.load(f)
+                for obj in loads_obj.values():
+                    self.new(eval(obj["__class__"])(**obj))
+        except FileNotFoundError:
+            return
