@@ -61,5 +61,19 @@ class HBNBCommand(cmd.Cmd):
 
         return 1 
 
+
+    def do_create(self, args):
+        """
+        Create an instance of BaseModel
+        Save it and prints its id.
+        """
+        nb_args = args.split()
+        if not self.check_if_args_is_correct(nb_args, True):
+            return
+
+        base_ = eval(nb_args[0])()
+        base_.save()
+        print(base_.id)
+
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
