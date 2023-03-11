@@ -119,5 +119,29 @@ class HBNBCommand(cmd.Cmd):
             str(objs[key]) for key in objs.keys()
         ])
 
+    def do_update(self, args):
+        """ Updates an instance based on the class name and id"""
+
+        nb_args = args.split()
+        if not self.check_if_args_is_correct(nb_args, True, True):
+            return
+
+        id = "{}.{}".format(nb_args[0], nb_args[1])
+
+        if len(nb_args) < 3:
+            print("** attribute name missing **")
+            return
+
+        if len(nb_args) < 4:
+            print("** value missing **")
+            return
+
+        if nb_args[2] in ["id", "created_at", "updated_at"]:
+            return
+
+        setattr(models.storage.all()[id], nb_args[2],
+                type(nb_args[2])(nb_args[3]))
+        models.storage.all()[id].save()
+
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
