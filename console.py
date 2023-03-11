@@ -75,5 +75,16 @@ class HBNBCommand(cmd.Cmd):
         base_.save()
         print(base_.id)
 
+    def do_show(self, args):
+        """
+        Prints string representation of an Insatance
+        """
+        nb_args = args.split()
+        if not self.check_if_args_is_correct(nb_args, True, True):
+            return
+
+        id = "{}.{}".format(nb_args[0], nb_args[1])
+        print(str(models.storage.all()[id]))
+
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
