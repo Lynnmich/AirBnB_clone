@@ -98,5 +98,26 @@ class HBNBCommand(cmd.Cmd):
         del models.storage.all()[id]
         models.storage.save()
 
+    def do_all(self, args):
+        """
+        Prints all string representation
+        """
+        nb_args = args.split()
+        objs = models.storage.all()
+
+        if len(nb_args) and (not self.check_if_args_is_correct(nb_args, True)):
+            return
+
+        if len(nb_args):
+            print([
+                str(objs[key]) for key in objs.keys()
+                if str(key).startswith(nb_args[0])
+            ])
+            return
+
+        print([
+            str(objs[key]) for key in objs.keys()
+        ])
+
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
