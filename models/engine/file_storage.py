@@ -2,6 +2,8 @@
 """This module represents file storage class"""
 import json
 from models.base_model import BaseModel
+from models.user import User
+
 
 class FileStorage():
     """This class serializes instances
