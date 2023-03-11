@@ -2,7 +2,6 @@
 """
 Place Representation module
 """
-import models
 from models.base_model import BaseModel
 
 
