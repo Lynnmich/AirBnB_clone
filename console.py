@@ -86,5 +86,17 @@ class HBNBCommand(cmd.Cmd):
         id = "{}.{}".format(nb_args[0], nb_args[1])
         print(str(models.storage.all()[id]))
 
+    def do_destroy(self, args):
+        """Deletes an instance based on the class name and id
+        """
+        nb_args = args.split()
+        if not self.check_if_args_is_correct(nb_args, True, True):
+            return
+
+        id = "{}.{}".format(nb_args[0], nb_args[1])
+
+        del models.storage.all()[id]
+        models.storage.save()
+
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
