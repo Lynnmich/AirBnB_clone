@@ -5,6 +5,7 @@ This contains th Entry point of the command interpreter
 import cmd
 import sys
 import models
+from models.base_model import BaseModel
 
 
 class HBNBCommand(cmd.Cmd):
@@ -68,7 +69,7 @@ class HBNBCommand(cmd.Cmd):
         Save it and prints its id.
         """
         nb_args = args.split()
-        if not self.check_if_args_is_correct(nb_args, True):
+        if not self.check_args(nb_args, True):
             return
 
         base_ = eval(nb_args[0])()
@@ -80,7 +81,7 @@ class HBNBCommand(cmd.Cmd):
         Prints string representation of an Insatance
         """
         nb_args = args.split()
-        if not self.check_if_args_is_correct(nb_args, True, True):
+        if not self.check_args(nb_args, True, True):
             return
 
         id = "{}.{}".format(nb_args[0], nb_args[1])
@@ -90,7 +91,7 @@ class HBNBCommand(cmd.Cmd):
         """Deletes an instance based on the class name and id
         """
         nb_args = args.split()
-        if not self.check_if_args_is_correct(nb_args, True, True):
+        if not self.check_args(nb_args, True, True):
             return
 
         id = "{}.{}".format(nb_args[0], nb_args[1])
@@ -105,7 +106,7 @@ class HBNBCommand(cmd.Cmd):
         nb_args = args.split()
         objs = models.storage.all()
 
-        if len(nb_args) and (not self.check_if_args_is_correct(nb_args, True)):
+        if len(nb_args) and (not self.check_args(nb_args, True)):
             return
 
         if len(nb_args):
@@ -123,7 +124,7 @@ class HBNBCommand(cmd.Cmd):
         """ Updates an instance based on the class name and id"""
 
         nb_args = args.split()
-        if not self.check_if_args_is_correct(nb_args, True, True):
+        if not self.check_args(nb_args, True, True):
             return
 
         id = "{}.{}".format(nb_args[0], nb_args[1])
