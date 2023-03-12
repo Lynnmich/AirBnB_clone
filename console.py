@@ -18,7 +18,7 @@ class HBNBCommand(cmd.Cmd):
     """
     Command line interpreter class
     """
-    prompt = "(hnbn)"
+    prompt = "(hnbn) "
 
     def do_quit(self, args):
         """
@@ -37,7 +37,7 @@ class HBNBCommand(cmd.Cmd):
         return
 
     def check_args(self, nb_args, check_clsname=True,
-                                 check_id=False):
+                   check_id=False):
         """Check if passed args repect some
            Criteria
         """
@@ -66,8 +66,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
                 return 0
 
-        return 1 
-
+        return 1
 
     def do_create(self, args):
         """
@@ -149,6 +148,7 @@ class HBNBCommand(cmd.Cmd):
         setattr(models.storage.all()[id], nb_args[2],
                 type(nb_args[2])(nb_args[3]))
         models.storage.all()[id].save()
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
