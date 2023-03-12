@@ -155,7 +155,8 @@ class HBNBCommand(cmd.Cmd):
             "all": self.do_all,
             "show": self.do_show,
             "update": self.do_update,
-            "destroy": self.do_destroy
+            "destroy": self.do_destroy,
+            "count": self.count_instance
         }
         nb_args = arg.split(".")
 
