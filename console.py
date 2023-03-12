@@ -152,7 +152,8 @@ class HBNBCommand(cmd.Cmd):
     def default(self, arg):
         """The default method"""
         arg_dict = {
-            "all": self.do_all
+            "all": self.do_all,
+            "show": self.do_show,
         }
         nb_args = arg.split(".")
 
