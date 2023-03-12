@@ -9,6 +9,7 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
+
 class FileStorage():
     """This class serializes instances
     to JSON file and deserializes JSON file to instances"""
@@ -23,7 +24,7 @@ class FileStorage():
     def new(self, obj):
         """sets in __objects the obj with
         key <obj class name>.id"""
-        FileStorage.__objects[obj.__class__.__name__ +"."
+        FileStorage.__objects[obj.__class__.__name__ + "."
                               + obj.id] = obj
 
     def save(self):
