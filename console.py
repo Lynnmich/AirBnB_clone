@@ -18,7 +18,7 @@ class HBNBCommand(cmd.Cmd):
     """
     Command line interpreter class
     """
-    prompt = "(hnbn) "
+    prompt = "(hnbn)"
 
     def do_quit(self, args):
         """
