@@ -154,6 +154,7 @@ class HBNBCommand(cmd.Cmd):
         arg_dict = {
             "all": self.do_all,
             "show": self.do_show,
+            "update": self.do_update,
         }
         nb_args = arg.split(".")
 
