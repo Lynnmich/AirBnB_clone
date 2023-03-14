@@ -1,4 +1,6 @@
-AirBnB Clone Project
+#AirBnB Clone Project
+![image](https://user-images.githubusercontent.com/99338832/224989645-2aa6247d-7b73-48bd-b755-2149e45582c1.png)
+
 
 The goal of the project is to deploy on our server a simple copy of the AirBnB website.
 
@@ -13,7 +15,7 @@ The complete web application will be composed of:
 - An API that provides a communication interface between the front-end and your data (retrieve, create, delete, update them)
 
 
-Concepts learned
+##Concepts learned
 
 - Unittests
 
@@ -26,7 +28,7 @@ Concepts learned
 - datetime
 
 
-Steps
+##Steps
 
 Each step will link to a concept:
 
@@ -58,7 +60,7 @@ store and persist objects to a file (JSON file)
 
 
 
-AirBnB Project: The Console
+##AirBnB Project: The Console
 
 This is a team project to build a clone of AirBnB.
 
@@ -76,14 +78,14 @@ The files were interpreted and compiled using Ubuntu 20.04 LTS and the  programm
 The editor used was VIM.
 
 
-1. Installation
+1. ###Installation
 
 Clone the repository.
 
 $ git clone https://github.com/------/AirBnB_clone.git
 
 
-2. Usage
+2. ###Usage
 
 Method	Description
 create	Creates object of given class
@@ -116,7 +118,7 @@ Quit the console:
 $
 
 
-3. Tests
+3. ###Tests
 All the tests are defined in the tests folder.
 
 - Documentation
