@@ -15,7 +15,7 @@ The complete web application will be composed of:
 - An API that provides a communication interface between the front-end and your data (retrieve, create, delete, update them)
 
 
-**Concepts learned**
+## **Concepts learned**
 
 - Unittests
 
@@ -28,7 +28,7 @@ The complete web application will be composed of:
 - datetime
 
 
-**Steps**
+## **Steps**
 
 Each step will link to a concept:
 
@@ -60,7 +60,7 @@ store and persist objects to a file (JSON file)
 
 
 
-**AirBnB Project: The Console**
+## **AirBnB Project: The Console**
 
 This is a team project to build a clone of AirBnB.
 
@@ -78,14 +78,14 @@ The files were interpreted and compiled using Ubuntu 20.04 LTS and the  programm
 The editor used was VIM.
 
 
-1. **Installation**
+### 1. **Installation**
 
 Clone the repository.
 ```
 $ git clone https://github.com/------/AirBnB_clone.git
 ```
 
-2. **Usage**
+### 2. **Usage**
 
 Method	Description
 create	Creates object of given class
@@ -97,7 +97,7 @@ count	Retrieve the number of instances of a class
 help	Prints information about specific command
 quit/ EOF	Exit the program
 
-- Application
+####- Application
 Start the console in interactive mode:
 ```
 $ ./console.py
@@ -126,7 +126,7 @@ Quit the console:
 $
 ```
 
-3. **Tests**
+### 3. **Tests**
 All the tests are defined in the tests folder.
 
 - Documentation
@@ -148,7 +148,7 @@ and
 python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
 ```
 
-- Python Unit Tests
+#### - Python Unit Tests
 
 unittest module
 
