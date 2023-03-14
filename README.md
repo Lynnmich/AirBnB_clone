@@ -87,6 +87,7 @@ $ git clone https://github.com/------/AirBnB_clone.git
 
 ### 2. **Usage**
 
+
 | Method | | Description | 
 | ------- | | ----------- |
 | create | | Creates object of given class |
