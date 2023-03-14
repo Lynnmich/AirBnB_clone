@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines unittests forstate.py.
+"""Defines unittests for models/state.py.
 Unittest classes:
     TestState_instantiation
     TestState_save
@@ -21,7 +21,7 @@ class TestState_instantiation(unittest.TestCase):
 
     def test_new_instance_stored_in_objects(self):
         self.assertIn(State(), models.storage.all().values())
-i
+
     def test_id_is_public_str(self):
         self.assertEqual(str, type(State().id))
 
