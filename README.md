@@ -1,4 +1,4 @@
-**# AirBnB Clone Project**
+# **AirBnB Clone Project**
 ![image](https://user-images.githubusercontent.com/99338832/224989645-2aa6247d-7b73-48bd-b755-2149e45582c1.png)
 
 
@@ -15,7 +15,7 @@ The complete web application will be composed of:
 - An API that provides a communication interface between the front-end and your data (retrieve, create, delete, update them)
 
 
-**## Concepts learned**
+**Concepts learned**
 
 - Unittests
 
@@ -28,7 +28,7 @@ The complete web application will be composed of:
 - datetime
 
 
-**## Steps**
+**Steps**
 
 Each step will link to a concept:
 
@@ -60,7 +60,7 @@ store and persist objects to a file (JSON file)
 
 
 
-**## AirBnB Project: The Console**
+**AirBnB Project: The Console**
 
 This is a team project to build a clone of AirBnB.
 
@@ -78,14 +78,14 @@ The files were interpreted and compiled using Ubuntu 20.04 LTS and the  programm
 The editor used was VIM.
 
 
-1. **### Installation**
+1. **Installation**
 
 Clone the repository.
-
+```
 $ git clone https://github.com/------/AirBnB_clone.git
+```
 
-
-2. **### Usage**
+2. **Usage**
 
 Method	Description
 create	Creates object of given class
@@ -99,44 +99,54 @@ quit/ EOF	Exit the program
 
 - Application
 Start the console in interactive mode:
-
+```
 $ ./console.py
 (hbnb)
-
+```
 Use help to see the available commands:
-
+```
 (hbnb) help
+```
+
+in Non-interactive mode:
+
+```
+$ echo "help" | ./console.py
+(hbnb)
 
 Documented commands (type help <topic>):
 ========================================
 EOF  all  count  create  destroy  help  quit  show  update
 
 (hbnb)
-
+```
 Quit the console:
+```
 (hbnb) quit
 $
+```
 
-
-3. **###Tests**
+3. **Tests**
 All the tests are defined in the tests folder.
 
 - Documentation
 
 Modules:
-
+```
 python3 -c 'print(__import__("my_module").__doc__)'
-
+```
 Classes:
-
+```
 python3 -c 'print(__import__("my_module").MyClass.__doc__)'
-
+```
 Functions (inside and outside a class):
-
+```
 python3 -c 'print(__import__("my_module").my_function.__doc__)'
+```
 and
-
+```
 python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+```
 
 - Python Unit Tests
 
@@ -148,16 +158,27 @@ Files and folders star with test_
 
 Organization:for models/base.py, unit tests in: tests/test_models/test_base.py
 
-Execution command: python3 -m unittest discover tests
+Execution command: 
 
-or: python3 -m unittest tests/test_models/test_base.py
+```
+python3 -m unittest discover tests
+```
+
+or:
+```
+python3 -m unittest tests/test_models/test_base.py
+```
 
 - Run test in interactive mode
 
+```
 echo "python3 -m unittest discover tests" | bash
+```
 
 - Run test in non-interactive mode
 
 To run the tests in non-interactive mode, and discover all the test, you can use the command:
 
+```
 python3 -m unittest discover tests
+```
