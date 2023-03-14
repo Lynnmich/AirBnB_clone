@@ -1,4 +1,4 @@
-AirBnB Clone
+AirBnB Clone Project
 
 The goal of the project is to deploy on our server a simple copy of the AirBnB website.
 
@@ -13,9 +13,9 @@ The complete web application will be composed of:
 - An API that provides a communication interface between the front-end and your data (retrieve, create, delete, update them)
 
 
-Concepts to learn
+Concepts learned
 
-- Unittest - and please work all together on tests cases
+- Unittests
 
 - Python packages concept page
 
@@ -55,3 +55,107 @@ store and persist objects to a file (JSON file)
 6. Web dynamic
 -learn JQuery
 -load objects from the client side by using your own RESTful API
+
+
+
+AirBnB Project: The Console
+
+This is a team project to build a clone of AirBnB.
+
+The console is a command interpreter to manage objects abstraction between objects and how they are stored.
+
+The console will:
+
+- create a new object
+- retrive an object from a file
+- do operations on objects
+- destroy an object
+- Storage(All the classes are handled by the storage engine in the FileStorage Class.)
+
+The files were interpreted and compiled using Ubuntu 20.04 LTS and the  programming language used was Python 3.8.3. 
+The editor used was VIM.
+
+
+1. Installation
+
+Clone the repository.
+
+$ git clone https://github.com/------/AirBnB_clone.git
+
+
+2. Usage
+
+Method	Description
+create	Creates object of given class
+show	Prints the string representation of an instance based on the class name and id
+all	Prints all string representation of all instances based or not on the class name
+update	Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file)
+destroy	Deletes an instance based on the class name and id (save the change into the JSON file)
+count	Retrieve the number of instances of a class
+help	Prints information about specific command
+quit/ EOF	Exit the program
+
+- Application
+Start the console in interactive mode:
+
+$ ./console.py
+(hbnb)
+
+Use help to see the available commands:
+
+(hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  all  count  create  destroy  help  quit  show  update
+
+(hbnb)
+
+Quit the console:
+(hbnb) quit
+$
+
+
+3. Tests
+All the tests are defined in the tests folder.
+
+- Documentation
+
+Modules:
+
+python3 -c 'print(__import__("my_module").__doc__)'
+
+Classes:
+
+python3 -c 'print(__import__("my_module").MyClass.__doc__)'
+
+Functions (inside and outside a class):
+
+python3 -c 'print(__import__("my_module").my_function.__doc__)'
+and
+
+python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+
+- Python Unit Tests
+
+unittest module
+
+File extension .py
+
+Files and folders star with test_
+
+Organization:for models/base.py, unit tests in: tests/test_models/test_base.py
+
+Execution command: python3 -m unittest discover tests
+
+or: python3 -m unittest tests/test_models/test_base.py
+
+- Run test in interactive mode
+
+echo "python3 -m unittest discover tests" | bash
+
+- Run test in non-interactive mode
+
+To run the tests in non-interactive mode, and discover all the test, you can use the command:
+
+python3 -m unittest discover tests
