@@ -89,7 +89,7 @@ $ git clone https://github.com/------/AirBnB_clone.git
 
 
 
-
+|   | |  |
 | Method | | Description | 
 | ------- | | ----------- |
 | create | | Creates object of given class |
@@ -100,7 +100,7 @@ $ git clone https://github.com/------/AirBnB_clone.git
 | count | | Retrieve the number of instances of a class |
 | help | | Prints information about specific command |
 | quit/ EOF | |	Exit the program |
-
+|     | |          |
 
 
 ####  Application
