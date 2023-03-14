@@ -97,7 +97,7 @@ count	Retrieve the number of instances of a class
 help	Prints information about specific command
 quit/ EOF	Exit the program
 
-####- Application
+#### - Application
 Start the console in interactive mode:
 ```
 $ ./console.py
