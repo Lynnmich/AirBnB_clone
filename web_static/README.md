@@ -8,8 +8,3 @@ It is the structure of a webpage.
 
 ## CSS(Cascading StyleSheets)
 It is implemented in the styling of a webpage.
-
-
-
-
-
